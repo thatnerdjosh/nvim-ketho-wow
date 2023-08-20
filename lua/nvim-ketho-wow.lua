@@ -13,9 +13,9 @@ local M = {}
 ---@type Config
 -- M.config = config
 
----@param args Config?
 -- you can define your setup function here. Usually configurations can be merged, accepting outside params and
 -- you can also put some validation here for those.
+---@param args Config?
 M.setup = function(args)
 	-- M.config = vim.tbl_deep_extend("force", M.config, args or {})
 	local lsputil = require("lspconfig.util")
@@ -32,9 +32,9 @@ M.get_completion_paths = function()
 end
 
 M.on_new_config = function(config)
-	config.settings.Lua.workspace = {
-		library = {}
-	}
+	config.settings.Lua.workspace = config.settings.Lua.workspace or {}
+	local library = config.settings.Lua.workspace.library or {}
+	config.settings.Lua.workspace.library = library
 
 	for _, value in ipairs(module.completion_paths()) do
 		table.insert(config.settings.Lua.workspace.library, value)
