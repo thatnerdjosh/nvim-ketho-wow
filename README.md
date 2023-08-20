@@ -33,7 +33,7 @@ require("nvim-ketho-wow").setup({
 
 - As of right now, the completions are set globally.
 
-### Credits
+## Credits
 
 * [ellisonleao](https://github.com/ellisonleao) for the [NViM Plugin Template](https://github.com/ellisonleao/nvim-plugin-template).
 * [ketho](https://github.com/ketho) for help understanding the completions.
