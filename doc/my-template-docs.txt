@@ -8,6 +8,7 @@ Table of Contents                         *my-template-docs-table-of-contents*
   - Configuration|my-template-docs-neovim-plugin-for-ketho’s-wow-completions-configuration|
   - Features and structure|my-template-docs-neovim-plugin-for-ketho’s-wow-completions-features-and-structure|
   - Known Limitations|my-template-docs-neovim-plugin-for-ketho’s-wow-completions-known-limitations|
+  - Credits|my-template-docs-neovim-plugin-for-ketho’s-wow-completions-credits|
 
 ==============================================================================
 1. NeoViM Plugin for Ketho’s WoW Completions*my-template-docs-neovim-plugin-for-ketho’s-wow-completions*
@@ -50,7 +51,7 @@ KNOWN LIMITATIONS*my-template-docs-neovim-plugin-for-ketho’s-wow-completions-k
 - As of right now, the completions are set globally.
 
 
-CREDITS ~
+CREDITS *my-template-docs-neovim-plugin-for-ketho’s-wow-completions-credits*
 
 - ellisonleao <https://github.com/ellisonleao> for the NViM Plugin Template <https://github.com/ellisonleao/nvim-plugin-template>.
 - ketho <https://github.com/ketho> for help understanding the completions.
