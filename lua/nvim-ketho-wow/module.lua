@@ -9,8 +9,8 @@ local pluginPath = debug.getinfo(1).source:match("@?(.*/)")
 
 M.completion_paths = function()
     return {
-        pluginPath .. "../../vscode-wow-api/EmmyLua/API",
-        pluginPath .. "../../vscode-wow-api/EmmyLua/Optional",
+        API = pluginPath .. "../../vscode-wow-api/EmmyLua/API",
+        Optional = pluginPath .. "../../vscode-wow-api/EmmyLua/Optional",
     }
 end
 

@@ -8,7 +8,7 @@
 ### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
-{ "thatnerdjosh/nvim-ketho-wow", opts = {} }
+{ "thatnerdjosh/nvim-ketho-wow" }
 ```
 
 ## Configuration
@@ -17,13 +17,17 @@
 -- IMPORTANT: make sure to setup nvim-ketho-wow BEFORE lspconfig
 require("nvim-ketho-wow").setup({
   -- add any options here, or leave empty to use the default settings
+  -- enabled_completions = {
+  --     "API",
+  --     "Optional",
+  -- }
 })
 ```
 
 ## Features and structure
 
 - Amends to, doesn't replace libraries.
-- Easy to install/uninstall.
+- Easy to configure enabled completions when running `setup`.
 
 ## Known Limitations
 
