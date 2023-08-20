@@ -1,47 +1,36 @@
-# A Neovim Plugin Template
+# NeoViM Plugin for Ketho's WoW Completions
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ellisonleao/nvim-plugin-template/lint-test.yml?branch=main&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/thatnerdjosh/nvim-ketho-wow/lint-test.yml?branch=main&style=for-the-badge)
 ![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)
 
-A template repository for Neovim plugins.
+## Setup
 
-## Using it
+### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
-Via `gh`:
-
-```
-$ gh repo create my-plugin -p ellisonleao/nvim-plugin-template
+```lua
+{ "thatnerdjosh/nvim-ketho-wow", opts = {} }
 ```
 
-Via github web page:
+## Configuration
 
-Click on `Use this template`
-
-![](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
+```lua
+-- IMPORTANT: make sure to setup nvim-ketho-wow BEFORE lspconfig
+require("nvim-ketho-wow").setup({
+  -- add any options here, or leave empty to use the default settings
+})
+```
 
 ## Features and structure
 
-- 100% Lua
-- Github actions for:
-  - running tests using [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) and [busted](https://olivinelabs.com/busted/)
-  - check for formatting errors (Stylua)
-  - vimdocs autogeneration from README.md file
-  - luarocks release (LUAROCKS_API_KEY secret configuration required)
+- Amends to, doesn't replace libraries.
+- Easy to install/uninstall.
 
-### Plugin structure
+## Known Limitations
 
-```
-.
-├── lua
-│   ├── plugin_name
-│   │   └── module.lua
-│   └── plugin_name.lua
-├── Makefile
-├── plugin
-│   └── plugin_name.lua
-├── README.md
-├── tests
-│   ├── minimal_init.lua
-│   └── plugin_name
-│       └── plugin_name_spec.lua
-```
+- As of right now, the completions are set globally.
+
+### Credits
+
+* [ellisonleao](https://github.com/ellisonleao) for the [NViM Plugin Template](https://github.com/ellisonleao/nvim-plugin-template).
+* [ketho](https://github.com/ketho) for help understanding the completions.
+* [folke](https://github.com/folke) for creating neodev which inspired the path for amending libraries.
