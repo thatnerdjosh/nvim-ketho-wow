@@ -21,7 +21,7 @@ SETUP     *my-template-docs-neovim-plugin-for-ketho’s-wow-completions-setup*
 LAZY.NVIM ~
 
 >lua
-    { "thatnerdjosh/nvim-ketho-wow", opts = {} }
+    { "thatnerdjosh/nvim-ketho-wow" }
 <
 
 
@@ -31,6 +31,10 @@ CONFIGURATION*my-template-docs-neovim-plugin-for-ketho’s-wow-completions-confi
     -- IMPORTANT: make sure to setup nvim-ketho-wow BEFORE lspconfig
     require("nvim-ketho-wow").setup({
       -- add any options here, or leave empty to use the default settings
+      -- enabled_completions = {
+      --     "API",
+      --     "Optional",
+      -- }
     })
 <
 
@@ -38,7 +42,7 @@ CONFIGURATION*my-template-docs-neovim-plugin-for-ketho’s-wow-completions-confi
 FEATURES AND STRUCTURE*my-template-docs-neovim-plugin-for-ketho’s-wow-completions-features-and-structure*
 
 - Amends to, doesn’t replace libraries.
-- Easy to install/uninstall.
+- Easy to configure enabled completions when running `setup`.
 
 
 KNOWN LIMITATIONS*my-template-docs-neovim-plugin-for-ketho’s-wow-completions-known-limitations*
