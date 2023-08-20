@@ -3,6 +3,7 @@ local plugin = require("nvim-ketho-wow")
 describe("setup", function()
 	it("works with default", function()
 		assert("can get completion paths", plugin.get_completion_paths())
+		assert("blah", 1 == 2)
 	end)
 
 	-- it("works with custom var", function()

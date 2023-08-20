@@ -17,28 +17,28 @@ local M = {}
 -- you can also put some validation here for those.
 ---@param args Config?
 M.setup = function(args)
-	-- M.config = vim.tbl_deep_extend("force", M.config, args or {})
-	local lsputil = require("lspconfig.util")
-	local hook = lsputil.add_hook_after
-	lsputil.on_setup = hook(lsputil.on_setup, function(config)
-		if config.name == "lua_ls" then
-			config.on_new_config = hook(config.on_new_config, M.on_new_config)
-		end
-	end)
+    -- M.config = vim.tbl_deep_extend("force", M.config, args or {})
+    local lsputil = require("lspconfig.util")
+    local hook = lsputil.add_hook_after
+    lsputil.on_setup = hook(lsputil.on_setup, function(config)
+        if config.name == "lua_ls" then
+            config.on_new_config = hook(config.on_new_config, M.on_new_config)
+        end
+    end)
 end
 
 M.get_completion_paths = function()
-	module.completion_paths()
+    module.completion_paths()
 end
 
 M.on_new_config = function(config)
-	config.settings.Lua.workspace = config.settings.Lua.workspace or {}
-	local library = config.settings.Lua.workspace.library or {}
-	config.settings.Lua.workspace.library = library
+    config.settings.Lua.workspace = config.settings.Lua.workspace or {}
+    local library = config.settings.Lua.workspace.library or {}
+    config.settings.Lua.workspace.library = library
 
-	for _, value in ipairs(module.completion_paths()) do
-		table.insert(config.settings.Lua.workspace.library, value)
-	end
+    for _, value in ipairs(module.completion_paths()) do
+        table.insert(config.settings.Lua.workspace.library, value)
+    end
 end
 
 return M
